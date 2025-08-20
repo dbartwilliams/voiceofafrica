@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-gelasio: "Gelasio", "sans-serif";
+
+  /* --breakpoint-*: initial; */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  --color-white: #FFFFFF;
+  --color-black: #242424;
+  --color-grey: #F3F3F3;
+  --color-dark-grey: #6B6B6B;
+  --color-red: #FF4E4E;
+  --color-transparent: transparent;
+  --color-twitter: #1DA1F2;
+  --color-purple: #8B46FF;
+    }
+
+    @layer components {
+
+    html{
+      @apply overflow-x-hidden;
+    }
+
+    body {
+      @apply  w-screen font-gelasio font-normal bg-[#1e1e1e] text-white;
+    }
+    .animatedButton{
+      animation-duration: 10000ms;
+    }
+
+    .textcol{
+      @apply text-[#5eeccc] hover:text-[#1be415]
+    }  
+
+    .texthover{
+      @apply text-white hover:text-[#1be415]
+    }  
+
+    .buttoncol {
+      @apply bg-[#5eeccc] hover:bg-[#1be415] text-black
+    }
+
+    .editor-btn {
+      @apply flex items-center justify-center w-10 rounded-lg text-slate-700 aspect-square;
+    }
+
+    .active-editor-btn {
+      @apply text-slate-800 bg-slate-200;
+    }
+
+      /* Force ALL text to be white in prose-invert containers */
+      .prose-invert,
+      .prose-invert *:not(pre *, code *, .token *) {
+        color: white !important;
+      }
+
+      /* Specific heading styles */
+      .prose-invert h1,
+      .prose-invert h2, 
+      .prose-invert h3,
+      .prose-invert h4,
+      .prose-invert h5,
+      .prose-invert h6 {
+        color: white !important;
+        font-weight: 600;
+      }
+
+      /* Handle inline text elements that often get styled */
+      .prose-invert p,
+      .prose-invert span,
+      .prose-invert div,
+      .prose-invert li,
+      .prose-invert strong,
+      .prose-invert em {
+        color: inherit !important;
+      }
+
+      /* Preserve code block styling (important!) */
+      .prose-invert pre,
+      .prose-invert code,
+      .prose-invert .token * {
+        color: inherit !important;
+      }
+
+    /* DASHBORAD */
+    /* Animation for page transitions */
+      .page-enter {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      .page-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms, transform 300ms;
+      }
+
+      .page-exit {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .page-exit-active {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 300ms, transform 300ms;
+      }
+    /* DASHBORAD */
+
+
+}
