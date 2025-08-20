@@ -7,7 +7,7 @@ import { FaHome } from "react-icons/fa";
 import { MdOutlineMailLock } from "react-icons/md";
 import { FaBlog } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
-import { CgLogIn, CgLogOut } from "react-icons/cg";
+import { CgLogOut } from "react-icons/cg";
 import { CiUser } from "react-icons/ci";
 
 import { FaReact, FaNodeJs } from "react-icons/fa";
