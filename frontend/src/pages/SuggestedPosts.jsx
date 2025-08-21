@@ -21,7 +21,6 @@ const SuggestedPosts = ({ className, header, posts = [], tags }) => {
             >
               <Image
                 className="object-cover w-1/5 transition-transform duration-500 ease-in-out transform rounded-lg cursor-pointer aspect-square hover:scale-105"
-                // src={item.photo ? item.photo : "default-post.jpg"}
                 src={getPostImagePath(item.photo)}
                 alt='PostImg'
               />

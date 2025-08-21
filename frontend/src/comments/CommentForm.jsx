@@ -40,8 +40,7 @@ const CommentForm = ({
             className="px-4 py-2 rounded bg-[#5eeccc] hover:bg-[#1be415] tracking-[.1em] cursor-pointer
          text-black font-bold disabled:opacity-70 disabled:cursor-not-allowed"
           >
-            Send
-            {/* {btnLabel} */}
+            {btnLabel}
           </button>
         </div>
       </div>

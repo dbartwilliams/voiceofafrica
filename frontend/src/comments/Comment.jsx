@@ -1,8 +1,8 @@
 import React from "react";
 import { formatDistanceToNow } from 'date-fns';
 import { FiMessageSquare, FiEdit2, FiTrash } from "react-icons/fi";
+import { getAvatarPath } from '../util/imageKitHelper';
 
-import { images } from "../constants";
 import CommentForm from "./CommentForm";
 
 const Comment = ({
@@ -34,15 +34,12 @@ const Comment = ({
       className="flex items-start p-3 bg-gray-800 rounded-lg flex-nowrap gap-x-3"
       id={`comment-${comment?._id}`}
     >
-      <img
-        src={
-          comment?.user?.avatar
-            ? stables.UPLOAD_FOLDER_BASE_URL + comment.user.avatar
-            : images.userImage
-        }
-        alt="user profile"
-        className="object-cover rounded-full w-9 h-9"
-      />
+          <Image
+            src={getAvatarPath(comment.user.avatar)}
+            alt="user avatar"
+            className="object-cover rounded-full w-9 h-9"
+          />
+        
       <div className="flex flex-col flex-1">
         <h5 className="text-xs font-bold text-[#5eeccc] lg:text-sm">
           {comment.user.name}

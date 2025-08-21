@@ -32,8 +32,8 @@ const Contact = () => {
         Contact: VoiceofAfrica
         </h2>
       <p className="mb-6 text-gray-200">
-        <strong>Contributors Welcome</strong> | We’re always on the lookout for top quality UK content writers.
-        Please submit the form or write to <a href="mailto:contributors@voiceofafrica.co.uk" className="text-blue-600 underline">contributors@voiceofafrica.co.uk</a>.
+        <strong>Contributors Welcome</strong> | We’re always on the lookout for top quality African content writers.
+        Please submit the form or write to <a href="mailto:contributors@voiceofafrica.co.uk" className="text-[#5eeccc] hover:text-[#1be415] border-b mb-1">contributors@voiceofafrica.co.uk</a>
       </p>
       <form onSubmit={handleSubmit} className="p-6 space-y-4 bg-gray-800 rounded-md shadow-md">
         <div>
@@ -68,7 +68,7 @@ const Contact = () => {
             required
             rows="5"
             className="w-full px-3 py-2 border border-gray-700 rounded resize-none"
-            placeholder="Tell us why you're interested..."
+            placeholder="Requested becoming an voiceofafrica contributor"
           />
         </div>
         <button

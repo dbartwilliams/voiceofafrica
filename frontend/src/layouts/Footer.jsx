@@ -15,7 +15,7 @@ const Footer = () => {
           
           <ul className="text-[#959EAD] text-sm mt-5 space-y-4 md:text-base tracking-[.1em]">
             <li><a href="/" className="p-2 rounded hover:bg-gray-700">Home</a></li>
-            <li><a href="/faq" className="p-2 rounded hover:bg-gray-700">Faq</a></li>
+            <li><a href="/blog" className="p-2 rounded hover:bg-gray-700">Blog</a></li>
             <li><a href="/contact" className="p-2 rounded hover:bg-gray-700">Contact</a></li>
           </ul>
         </div>

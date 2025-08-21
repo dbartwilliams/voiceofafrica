@@ -179,7 +179,7 @@ const Header = () => {
               onClick={() => navigate("/login")}
              className="px-4 py-1 mt-5 font-semibold text-black bg-[#5eeccc] transition-all duration-300 rounded lg:mt-0  hover:bg-[#1be415] cursor-pointer"
             >
-              LOg-In
+              Log-In
             </button>
           )}
         </div>

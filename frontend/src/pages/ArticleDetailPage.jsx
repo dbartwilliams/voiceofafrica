@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -16,6 +15,7 @@ import ArticleDetailSkeleton from '../components/ArticleDetailSkeleton';
 import ErrorMessage from '../components/ErrorMessage'
 import { useSelector } from "react-redux";
 import parseJsonToHtml from "../util/parseJsonToHtml";
+import { images } from "../constants";
 
 const ArticleDetailPage = () => {
     const { slug } = useParams();
@@ -146,7 +146,7 @@ const ArticleDetailPage = () => {
                     First People on the Planet
                     </h1>
                     <img 
-                        src="/beauties.png" 
+                        src= {images.SuggestedImg} 
                         alt="advertisement" 
                         className="w-[300px] h-[200px] rounded-lg shadow-md object-cover"
                     />

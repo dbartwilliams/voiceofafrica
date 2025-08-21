@@ -58,7 +58,7 @@ const CTA = () => {
               <div className="w-1/2 h-1/2 bg-white rounded-lg opacity-[.06] absolute -bottom-[10%] -left-[8%]" />
               <div className="w-full rounded-xl bg-white p-3 z-[1] relative">
                 <img
-                  src={images.Post1Image}
+                  src={images.CtaImage}
                   alt="title"
                   className="object-cover object-center w-full h-auto md:h-52 lg:h-48 xl:h-60"
                 />
