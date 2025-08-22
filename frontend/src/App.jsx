@@ -8,7 +8,7 @@ import BlogPage from "./pages/BlogPage";
 import ProfilePage from "./pages/ProfilePage";
 import ArticleDetailPage from "./pages/ArticleDetailPage";
 import DashLayout from "./admin/DashLayout";
-import Dashboard from "./admin/dashboard";
+import Dashboard from "./admin/Dashboard";
 import DashPosts from "./admin/DashPosts";
 import EditPost from "./admin/EditPost";
 import DashUsers from "./admin/DashUsers";
