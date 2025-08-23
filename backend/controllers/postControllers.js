@@ -9,7 +9,7 @@ const createPost = async (req, res, next) => {
       const defaultImage = "default-post.jpg";
 
     const post = new Post({
-      title: "sample title",
+      title: "I am your sample title",
       caption: "Please replace the sample caption",
       slug: uuidv4(),
       isPublished: false,

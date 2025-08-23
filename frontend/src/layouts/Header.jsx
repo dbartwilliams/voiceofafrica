@@ -145,7 +145,7 @@ const Header = () => {
                       profileDrowpdown ? "block" : "hidden"
                     } lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-32 bg-gray-700`}>
                     <ul className="flex flex-col overflow-hidden text-center bg-gray-700 rounded-lg shadow-lg lg:bg-transparent">
-                      {userState?.userInfo?.admin && (
+                      {/* {userState?.userInfo?.admin && (
                         <button
                           onClick={() => navigate("/dashboard")}
                           type="button"
@@ -153,8 +153,17 @@ const Header = () => {
                           <MdDashboard className="w-5 h-5 mr-2"/>
                           Dashboard
                         </button>
-                      )}
+                      )} */}
 
+                      {userState?.userInfo?.admin && (
+                      <button
+                        onClick={() => navigate("/dashboard")}
+                        type="button"
+                        className="flex px-1 py-2 text-white cursor-pointer hover:text-[#1be415]">
+                         <MdDashboard className="w-5 h-5 mr-2"/>
+                        Dash
+                      </button>
+                        )}
                       <button
                         onClick={() => navigate("/profile")}
                         type="button"

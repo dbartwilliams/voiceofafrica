@@ -2,6 +2,7 @@ import React from "react";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-hot-toast";
 import { useDataTable } from "../hooks/useDataTable";
+import { formatDistanceToNow } from 'date-fns';
 import {
   deleteUser,
   getAllUsers,
@@ -12,7 +13,7 @@ import Image from "../components/Image";
 import { getAvatarPath } from '../util/imageKitHelper';
 
 
-const Users = () => {
+const DashUsers = () => {
   const {
     userState,
     currentPage,
@@ -117,11 +118,7 @@ const Users = () => {
           </td>
           <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-700">
             <p className="text-gray-200 whitespace-no-wrap">
-              {new Date(user.createdAt).toLocaleDateString("en-US", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              })}
+            {formatDistanceToNow(new Date(user.createdAt), { addSuffix: true })}
             </p>
           </td>
           <td className="px-5 py-5 text-sm bg-gray-800 border-b border-gray-700">
@@ -158,4 +155,4 @@ const Users = () => {
     </DataTable>
   );
 };
-export default Users;
+export default DashUsers;

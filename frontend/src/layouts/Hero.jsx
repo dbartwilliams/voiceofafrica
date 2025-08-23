@@ -12,7 +12,7 @@ const Hero = () => {
         African Voices of A New Generation
         </h1>
         <p className="mt-4 text-center lg:text-2xl md:text-xl xl:text-xl lg:text-left">
-        Africa is a crime scene, bleeding from the wounds of colonization, imperialism, endless genocides, and the theft of our resources, while our people suffer. The land needs time to heal, but NOT in the presence of the colonizers. The wounds of our ancestors demand justice, not silence.
+        Africa is a crime scene, bleeding from the wounds of colonization, imperialism, genocide, the theft of our resources, and the assassination of our leaders, including Lumumba, Gaddafi, Sankara, and Mandela. The soil needs time to heal, but not in the presence of colonizers or invaders claiming to be indigenous. The wounds of our ancestors demand justice, not silence.
         </p>
         <Search className="mt-10 lg:mt-6 xl:mt-10" />
         <div className="flex flex-col pb-1 mt-4 border-b border-gray-700 lg:flex-row lg:items-start lg:flex-nowrap lg:gap-x-4 lg:mt-7">

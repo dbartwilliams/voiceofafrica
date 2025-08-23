@@ -1,4 +1,4 @@
-export default function DashAnalytics() {
+const DashAnalytics = () => {
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold">Analytics Management</h1>
@@ -6,3 +6,4 @@ export default function DashAnalytics() {
       </div>
     )
   }
+export default DashAnalytics;

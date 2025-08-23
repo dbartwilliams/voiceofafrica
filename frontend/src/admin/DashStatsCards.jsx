@@ -4,7 +4,7 @@ import { FaUsers } from "react-icons/fa";
 import { FaRocketchat } from "react-icons/fa";
 
 
-export default function StatsCards() {
+const DashStatsCards = () => {
   return (
     <div className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-3">
       <NavLink
@@ -52,3 +52,4 @@ export default function StatsCards() {
     </div>
   );
 }
+export default DashStatsCards;

@@ -11,10 +11,9 @@ import {
   updateComment,
 } from "../services/index/comments";
 import DataTable from "../components/DataTable";
-import { images} from "../constants";
 import { Link } from "react-router-dom";
 
-const Comments = () => {
+const DashComments = () => {
   const {
     userState,
     currentPage,
@@ -172,4 +171,4 @@ const Comments = () => {
   );
 };
 
-export default Comments;
+export default DashComments;

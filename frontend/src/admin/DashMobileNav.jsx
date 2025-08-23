@@ -6,7 +6,7 @@ import {
   ChartBarIcon
 } from '@heroicons/react/outline';
 
-export default function MobileNav() {
+const DashMobileNav = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-10 text-white bg-indigo-800 md:hidden">
       <div className="flex justify-around">
@@ -42,3 +42,4 @@ export default function MobileNav() {
     </div>
   );
 }
+export default DashMobileNav;

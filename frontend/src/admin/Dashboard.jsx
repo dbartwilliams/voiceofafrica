@@ -1,6 +1,6 @@
 import DashStatsCards from './DashStatsCards';
 
-export default function Dashboard() {
+const Dashboard = () => {
   return (
     <div>
       <DashStatsCards />
@@ -26,3 +26,4 @@ export default function Dashboard() {
     </div>
   );
 }
+export default Dashboard;

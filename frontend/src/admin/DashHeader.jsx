@@ -5,8 +5,7 @@ import Image from "../components/Image";
 import { getAvatarPath } from '../util/imageKitHelper';
 
 const DashHeader = ({ setSidebarOpen }) => {
-// export default function Header({ setSidebarOpen }) {
-  const userState = useSelector((state) => state.user); // get auth user
+  const userState = useSelector((state) => state.user);
   const user = userState?.userInfo;
 
 
