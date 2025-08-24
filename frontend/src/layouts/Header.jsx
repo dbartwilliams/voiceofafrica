@@ -145,39 +145,32 @@ const Header = () => {
                       profileDrowpdown ? "block" : "hidden"
                     } lg:hidden transition-all duration-500 pt-4 lg:absolute lg:bottom-0 lg:right-0 lg:transform lg:translate-y-full lg:group-hover:block w-32 bg-gray-700`}>
                     <ul className="flex flex-col overflow-hidden text-center bg-gray-700 rounded-lg shadow-lg lg:bg-transparent">
-                      {/* {userState?.userInfo?.admin && (
-                        <button
-                          onClick={() => navigate("/dashboard")}
-                          type="button"
-                          className="flex px-1 py-1 text-white cursor-pointer hover:text-[#1be415]">
-                          <MdDashboard className="w-5 h-5 mr-2"/>
-                          Dashboard
-                        </button>
-                      )} */}
 
                       {userState?.userInfo?.admin && (
-                      <button
-                        onClick={() => navigate("/dashboard")}
-                        type="button"
-                        className="flex px-1 py-2 text-white cursor-pointer hover:text-[#1be415]">
-                         <MdDashboard className="w-5 h-5 mr-2"/>
-                        Dash
-                      </button>
-                        )}
-                      <button
-                        onClick={() => navigate("/profile")}
-                        type="button"
-                        className="flex px-1 py-2 text-white cursor-pointer hover:text-[#1be415]">
-                        <CiUser className="w-5 h-5 mr-1"/>
-                        Profile
-                      </button>
-                      <button
+                        <Link 
+                          to="/dashboard"
+                          className="flex px-1 py-2 text-white cursor-pointer hover:text-[#1be415]"
+                          >
+                          <MdDashboard className="w-5 h-5 mr-2"/>
+                          Dashboard
+                        </Link>
+                      )}
+
+                       <Link 
+                          to="/profile"
+                          className="flex px-1 py-2 text-white cursor-pointer hover:text-[#1be415]"
+                          >
+                          <CiUser className="w-5 h-5 mr-1"/>
+                          Profile
+                      </Link>
+     
+                      <Link
                         onClick={logoutHandler}
                         type="button"
                         className="flex px-1 py-2 text-white cursor-pointer hover:text-[#1be415]">
                           <CgLogOut className="w-5 h-5 mr-1"/>
                         Logout
-                      </button>
+                      </Link>
                     </ul>
                   </div>
                 </div>

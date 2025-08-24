@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { formatDistanceToNow } from "date-fns";
 import Image from "../components/Image";
 import { getAvatarPath, getPostImagePath } from '../util/imageKitHelper';
+// import { IKImage } from "imagekitio-react";
 
 const ArticleCard = ({ post }) => {
 
@@ -13,12 +14,17 @@ const ArticleCard = ({ post }) => {
         {/* Image - Left (2/5 on desktop) */}
         <div className="flex-shrink-0 w-full md:w-2/5">
           <Link to={`/blog/${post.slug}`}>
-            <Image
-              src={getPostImagePath(post.photo)}
-              alt={post.title}
+
+             {/* <IKImage urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT} 
+              path={post.photo ? `posts/${post.photo}` : 'posts/default-post.jpg'}
               className="object-cover object-center w-full h-auto md:h-full"
               loading="lazy"
-            />
+             /> */}
+              <Image
+                className="object-cover object-center w-full h-auto md:h-full"
+                src={getPostImagePath(post.photo)}
+                loading="lazy"
+              />
           </Link>
         </div>
 
@@ -41,11 +47,19 @@ const ArticleCard = ({ post }) => {
             {/* Left side - Avatar + user + date */}
             <Link to={`/blog/${post.slug}`}>
               <div className="flex items-center space-x-3">
-                <Image
-                  src={getAvatarPath(post.user.avatar)}
-                  alt="user avatar"
+                
+                {/* <IKImage urlEndpoint={import.meta.env.VITE_IK_URL_ENDPOINT} 
+                  path={post.user.avatar ? `avatars/${post.user.avatar}` : 'posts/default-post.jpg'}
                   className="object-cover w-10 h-10 rounded-full"
-                />
+                  loading="lazy"
+                /> */}
+
+              <Image
+                 className="object-cover w-10 h-10 rounded-full"
+                 src={getAvatarPath(post.user.avatar)}
+                 loading="lazy"
+              />
+                
                 <span className="text-sm font-medium text-white border-b border-[#5eeccc] md:text-base hover:text-[#1be415]">
                   {post.user?.name}
                 </span>

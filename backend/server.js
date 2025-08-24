@@ -45,9 +45,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-// Static files configuration
-app.use("/public", express.static(path.join(__dirname, "public")));
-app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 // =======================
 // API Routes
@@ -59,13 +56,11 @@ app.use("/api/comments", commentRoutes);
 app.use("/api/posts", postRoutes);
 
 
-
 // =======================
 // Custom Error Handlers
 // =======================
 app.use(invalidPathHandler);
 app.use(errorResponserHandler);
-
 
 
 // =======================

@@ -5,8 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const createPost = async (req, res, next) => {
   try {
-      const defaultTagStrings = ["War"];
-      const defaultImage = "default-post.jpg";
+    const defaultTagStrings = ["War"];
 
     const post = new Post({
       title: "I am your sample title",
@@ -25,10 +24,10 @@ const createPost = async (req, res, next) => {
               }
             ]
           }
-        ],
+        ]
       },
-      photo: defaultImage, // Local image path
-        tags: defaultTagStrings,
+      photo: "default-post.jpg",
+      tags: defaultTagStrings,
       user: req.user._id,
     });
 
@@ -38,6 +37,8 @@ const createPost = async (req, res, next) => {
     next(error);
   }
 };
+
+
 
 
 const updatePost = async (req, res, next) => {

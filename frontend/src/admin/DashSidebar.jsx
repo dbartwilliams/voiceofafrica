@@ -61,102 +61,74 @@ import { images } from "../constants";
         </div>
         <nav className="flex-1 px-4 py-4 space-y-2">
           {/* Dashboard - Should match your index route */}
-          <NavLink
-            to="/dashboard"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded ${
-                isActive ? 'bg-[#5eeccc] text-black' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
-            <GoCommentDiscussion className="w-5 h-5 mr-3" />
-            Dashboard
-          </NavLink>
+          <Link 
+              to="/dashboard"
+              className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
+              <GoCommentDiscussion className="w-5 h-5 mr-3" />
+              Dashboard
+          </Link>
 
-          {/* Posts */}
-          <NavLink
-            to="/dashboard/posts"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded-lg ${
-                isActive ? 'bg-gray-700 text-white' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
-            <IoNewspaperSharp className="w-5 h-5 mr-3" />
-            Posts
-          </NavLink>
+          {/* Posts */}   
+          <Link 
+              to="/dashboard/posts"
+              className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
+               <IoNewspaperSharp className="w-5 h-5 mr-3" />
+               Posts
+          </Link>
 
-          {/* Users */}
-          <NavLink
-            to="/dashboard/users"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded-lg ${
-                isActive ? 'bg-gray-700 text-white' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
+          {/* Users */}   
+          <Link 
+              to="/dashboard/users"
+              className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
             <FaUsers className="w-5 h-5 mr-3" />
             Users
-          </NavLink>
+          </Link>
 
           {/* Comments */}
-          <NavLink
+          <Link 
             to="/dashboard/comments"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded-lg ${
-                isActive ? 'bg-gray-700 text-white' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
+              className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
             <FaRocketchat className="w-5 h-5 mr-3" />
             Comments
-          </NavLink>
+          </Link>
 
           {/* Categories */}
-            <NavLink
+          <Link 
             to="/dashboard/categories"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded-lg ${
-                isActive ? 'bg-gray-700 text-white' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
+              className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
             <TbCategory className="w-5 h-5 mr-3" />
             Categories
-          </NavLink>
+          </Link>
 
           {/* Analytics */}
-          <NavLink
+          <Link 
             to="/dashboard/analytics"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded-lg ${
-                isActive ? 'bg-gray-700 text-white' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
+              className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
             <IoAnalytics className="w-5 h-5 mr-3" />
             Analytics
-          </NavLink>
+          </Link>
 
           {/* Settings */}
-          <NavLink
+          <Link
             to="/dashboard/settings"
-            className={({ isActive }) => 
-              `flex items-center px-4 py-2 rounded-lg ${
-                isActive ? 'bg-gray-700 text-white' : 'hover:text-[#1be415] text-gray-200'
-              }`
-            }
-            onClick={() => setSidebarOpen(false)}
-          >
+            className="flex items-center px-4 py-2 rounded hover:text-[#1be415] text-gray-200"
+              onClick={() => setSidebarOpen(false)}
+            >
             <IoMdSettings className="w-5 h-5 mr-3" />
             Settings
-          </NavLink>
+          </Link>
 
           <button 
               disabled={isLoadingCreatePost}
